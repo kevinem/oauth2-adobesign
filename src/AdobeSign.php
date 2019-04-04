@@ -28,7 +28,7 @@ class AdobeSign extends AbstractProvider
 	 *
      * @var string
      */
-    protected $dataCenter = 'secure.na1';
+    public $dataCenter = 'secure.na1';
 
     /**
      * AdobeSign constructor.
@@ -46,11 +46,6 @@ class AdobeSign extends AbstractProvider
         }
 
         parent::__construct($options, $collaborators);
-    }
-	
-    public function getDataCenter()
-    {
-        return $this->dataCenter;
     }
 
     /**
