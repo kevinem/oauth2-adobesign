@@ -22,6 +22,10 @@ class AdobeSign extends AbstractProvider
     protected $scope;
 
     /**
+	 * Override this where needed - I found issues using Na with accounts created in the Eu
+	 * Example: "secure.eu1"
+	 * Example error: "Unable to authorize access because the client configuration is invalid: invalid_request"
+	 *
      * @var string
      */
     protected $dataCenter = 'secure.na1';
@@ -42,6 +46,11 @@ class AdobeSign extends AbstractProvider
         }
 
         parent::__construct($options, $collaborators);
+    }
+	
+    public function getDataCenter()
+    {
+        return $this->dataCenter;
     }
 
     /**
@@ -186,7 +195,8 @@ class AdobeSign extends AbstractProvider
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-            'Access-Token' => $token
+            'Access-Token' => $token,
+			'Authorization ' => 'Bearer '.$token
         ];
     }
 
