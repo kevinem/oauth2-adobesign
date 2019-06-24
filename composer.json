@@ -18,12 +18,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "KevinEm\\OAuth2\\Client\\": "src/"
+      "edmunds22\\OAuth2\\Client\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "KevinEm\\OAuth2\\Client\\Test\\": "tests/"
+      "edmunds22\\OAuth2\\Client\\Test\\": "tests/"
     }
   }
 }
