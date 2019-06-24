@@ -1,7 +1,7 @@
 <?php
 
 
-namespace KevinEm\OAuth2\Client;
+namespace edmunds22\OAuth2\Client;
 
 
 use League\OAuth2\Client\Provider\AbstractProvider;
